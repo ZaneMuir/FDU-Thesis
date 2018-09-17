@@ -1,0 +1,51 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = xelatex
+
+\documentclass[a4paper, 12pt]{book}
+
+\usepackage{FDUThesis}
+
+\begin{document}
+\includepdf{book-cover.pdf}
+\thispagestyle{empty}
+% use \thispagestyle{} fancy, plain, empty to redefine Per/Page Header
+
+% Front Matter
+\frontmatter
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\contentsname}
+\tableofcontents
+
+\include{Forewords}
+
+\listoffigures
+
+% Main Matter
+\mainmatter
+
+\include{Intro}
+
+\include{Chapter01}
+
+% ...
+
+% Appendix
+\appendix
+
+\renewcommand{\thechapter}{附录{\Alph{chapter}}}
+
+% Back Matter
+\backmatter
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliographystyle{FDUbib}
+\bibliography{ThesisBib}
+
+\backchapter{致谢}
+
+\clearpage
+\printindex
+
+\end{document}

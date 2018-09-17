@@ -1,0 +1,66 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = xelatex
+
+\documentclass[12pt]{article}
+\usepackage[bottom=3cm]{geometry}
+\geometry{a4paper}  % .. or letterpaper or a5 paper or ...
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\pagestyle{empty}
+
+% CJK Font Setup
+\usepackage[PunctStyle=kaiming, AutoFakeBold=false, AutoFakeSlant=false]{xeCJK}
+\setCJKmainfont[BoldFont={Songti SC Bold}, ItalicFont={STFangsong}]{Songti SC Regular}
+\setCJKsansfont[BoldFont={STHeiti}]{STXihei}
+% \setCJKmonofont[BoldFont={Hiragino Sans GB W6}]{Hiragino Sans GB W3}
+
+% English Font Setup
+\usepackage{fontspec, xltxtra, xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Times New Roman}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Futura Medium}
+\setmonofont[Scale=MatchLowercase]{Courier New}
+
+\newlength{\Han}
+\settowidth{\Han}{汉}
+\newcommand{\spreadCJK}[2]{\makebox[#1\Han][s]{#2}}
+
+\begin{document}
+\setlength{\headsep}{0cm}
+
+\begin{flushright}
+    \parbox[c]{6em}{
+        {\small \makebox[\width][c]{学校代码:\quad10246}\par
+        \makebox[\width][c]{学\phantom{占位}号:\quad14301010006}}}
+\end{flushright}
+
+\vspace{\stretch{0.5}}
+
+\begin{figure}[htbp]
+    \center
+    \includegraphics[width=0.5\textwidth]{src/misc/FudanLogo.eps}
+\end{figure}
+
+\vspace{\stretch{0.5}}
+
+\begin{center}
+    {\Huge \makebox[0.45\textwidth][s]{本科毕业论文}\par}
+    \vspace{\stretch{1.5}}
+    {\Large \textsf{论文题目}\par}
+    \vspace{\stretch{0.5}}
+    {\Large \textrm{Thesis Title}\par}
+
+    \vspace{\stretch{2}}
+
+    \parbox[c]{0.52\textwidth}{
+        \large \setlength{\baselineskip}{1.5\baselineskip}
+        \spreadCJK{8}{院系}:\quad 基础医学院\par
+        \spreadCJK{8}{专业}:\quad 基础医学\par
+        \spreadCJK{8}{姓名}:\quad 缪一展\par
+        \spreadCJK{8}{指导老师}:\quad 张嘉漪\quad 教授\par
+        \spreadCJK{8}{完成时间}:\quad 2019年4月1日}
+\end{center}
+
+\end{document}
