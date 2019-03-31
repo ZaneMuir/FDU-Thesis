@@ -4,48 +4,73 @@
 \documentclass[a4paper, 12pt]{book}
 
 \usepackage{FDUThesis}
+\usepackage{gbt7714} %在正文中 \cite 文献
+\author{Yizhan Miao $<$\href{mailto:yzmiao@pm.me}{yzmiao@pm.me}$>$}
 
 \begin{document}
+\setlength{\baselineskip}{20pt}  % 20磅行间距
 \includepdf{book-cover.pdf}
 \thispagestyle{empty}
 % use \thispagestyle{} fancy, plain, empty to redefine Per/Page Header
 
-% Front Matter
+% ---------------- Front Matter ----------------
 \frontmatter
 
 \phantomsection
 \addcontentsline{toc}{chapter}{\contentsname}
 \tableofcontents
 
-\include{Forewords}
+\include{src/Forewords}
 
-\listoffigures
+%\listoffigures
 
-% Main Matter
+% ---------------- Main Matter ----------------
 \mainmatter
 
-\include{Intro}
+\include{src/Intro}
 
-\include{Chapter01}
+\include{src/Methods}
 
-% ...
+\include{src/Results}
+% 行为学结果
+%% weber定律
+%% 增强学习的过程
+%% 与小鼠的比对
 
-% Appendix
-\appendix
+% 脑电信号
+%% 能量谱分析
+%% 带通滤波能量谱与行为的关联
+%% 相位分析
+%% 与小鼠的对比
 
-\renewcommand{\thechapter}{附录{\Alph{chapter}}}
+% 行为与脑电的关联
+%% 支持向量机
+%% 回溯神经网络模拟
+%% 对神经系统网络的窥探
 
-% Back Matter
+\include{src/Discussion}
+% 行为本身带来的科学问题
+% 人类与模式生物之间的对比和展望
+
+% ---------------- Appendix ----------------
+%\appendix
+
+%\renewcommand{\thechapter}{附录{\Alph{chapter}}}
+
+% ----------------
+\include{src/Review}
+
+% ---------------- Back Matter ----------------
 \backmatter
-
+\setlength{\baselineskip}{10pt}
 \phantomsection
 \addcontentsline{toc}{chapter}{\bibname}
-\bibliographystyle{FDUbib}
+%\bibliographystyle{FDUbib}
 \bibliography{ThesisBib}
 
 \backchapter{致谢}
 
 \clearpage
-\printindex
+%\printindex
 
 \end{document}

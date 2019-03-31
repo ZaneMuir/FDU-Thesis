@@ -1,0 +1,39 @@
+\ProvidesPackage{FDUFormat}
+
+\usepackage{geometry}
+\geometry{a4paper}
+
+%% Font
+\usepackage[PunctStyle=kaiming,AutoFakeBold=false,AutoFakeSlant=false]{xeCJK}
+\usepackage{indentfirst}
+\xeCJKDeclareSubCJKBlock{PUNC}{"FF1F}
+\setCJKmainfont[BoldFont={Songti SC Bold}] {Songti SC Regular}
+\setCJKsansfont[BoldFont={Heiti SC Medium}]{Heiti SC Light}
+\setCJKmonofont[BoldFont={Hiragino Sans GB W6}]{Hiragino Sans GB W3}
+
+
+% Use Fontsize inside {}, include a \par at the end of bracket to enable baselineskip
+\newcommand{\chuhao}{\fontsize{42pt}{50.4pt}\selectfont}       %初号
+\newcommand{\xiaochu}{\fontsize{36pt}{43.12pt}\selectfont}     %小初号
+\newcommand{\yihao}{\fontsize{27.5pt}{33pt}\selectfont}        %一号
+\newcommand{\erhao}{\fontsize{21pt}{25.2pt}\selectfont}        %二号
+\newcommand{\xiaoer}{\fontsize{18pt}{21.6pt}\selectfont}       %小二号
+\newcommand{\sanhao}{\fontsize{15.75pt}{18.9pt}\selectfont}    %三号
+\newcommand{\sihao}{\fontsize{13.75pt}{16.5pt}\selectfont}     %四号
+\newcommand{\xiaosi}{\fontsize{12pt}{14.4pt}\selectfont}       %小四号
+\newcommand{\wuhao}{\fontsize{10.5pt}{12.6pt}\selectfont}      %五号
+\newcommand{\xiaowu}{\fontsize{9pt}{10.8pt}\selectfont}        %小五号
+\newcommand{\liuhao}{\fontsize{7.875pt}{9.45pt}\selectfont}    %六号
+\newcommand{\qihao}{\fontsize{5.25pt}{6.3pt}\selectfont}       %七号
+
+
+%% document setup
+\usepackage{abstract}
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\abstractnamefont}{\normalfont\sihao\bfseries}
+\renewcommand{\abstracttextfont}{\normalfont\wuhao}
+\renewcommand{\absnamepos}{flushleft}
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\sanhao\bfseries}{\thesection}{1em}{}  % section font
+\titleformat{\subsection}{\normalfont\sihao\bfseries}{\thesubsection}{1em}{}  % subsection font

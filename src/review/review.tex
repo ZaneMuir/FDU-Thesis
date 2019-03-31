@@ -1,0 +1,47 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = xelatex
+
+\documentclass[a4paper, 12pt]{article}
+\usepackage{FDUFormat}
+
+%\usepackage{FDUThesis}
+% \usepackage{xeCJK}
+\title{计时(Timing)与视觉}
+\author{缪一展}
+\date{}
+\begin{document}
+%\includepdf{book-cover.pdf}
+%\thispagestyle{empty}
+% use \thispagestyle{} fancy, plain, empty to redefine Per/Page Header
+
+% Outline
+%% Computation
+%% Algorithm
+%% Implementation
+
+%% title
+
+\maketitle
+%% abstract
+\begin{abstract}
+    这是一个小摘要。
+\end{abstract}
+
+% 引言
+\input{introduction}
+
+% 理论机制与实验依据
+\input{putative_mechanism}
+
+% 计时与初级视皮层
+\input{timing_in_v1}
+
+% 目前的局限所在与未来的发展
+\input{conclusion}
+
+%\phantomsection
+%\addcontentsline{toc}{chapter}{\bibname}
+%\bibliographystyle{FDUbib}
+%\bibliography{ThesisBib}
+
+\end{document}
