@@ -36,6 +36,7 @@
 \begin{equation}
     W = \frac{\sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \mu) ^ 2}}{\mu},\ \mathrm{where}\ \mu = \frac{1}{N} \sum_{i=1}^N x_i
 \end{equation}
+
 其中，N表示所观察的测试总次数，x为每次轻拍手与前一次光栅刺激开始的相对时间，反应了患者需要主动计时的时间长度，
 即$ x = t_{tapping} - t_{previous\ grating\ onset} $。
 
@@ -73,7 +74,7 @@
     %   s = 6 / (2 * np.pi * F)
     %   wavelet = np.exp(2*1j*np.pi*wtime*F) * np.exp(-wtime**2/(2*s**2))
     %   return wavelet
-    M(f, t) = e ^ {2 \pi f t i} \cdot e ^ {\frac{-t^2}{2 * (6 / 2 \pi f)^2}}
+    M(f, t) = e ^ {2 \pi f t i} \cdot e ^ {-\frac{t^2}{2 * (6 / 2 \pi f)^2}}
 \end{equation}
 其中f为小波的震荡频率，t为相对应的时刻点；t的取值范围为-1到1秒，间隔为0.0005秒。
 震荡频率f的变换范围为对数分布的1到150Hz，共计40个频率点。

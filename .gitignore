@@ -1,3 +1,4 @@
+UltiSnips
 .DS_Store
 
 /*.pdf
@@ -8,4 +9,11 @@ archive/
 *.out
 *.toc
 *.blg
+*.fdb_latexmk
+*.fls
+*.synctex*
+*.xdv
 
+*.swp
+*.eps
+*.svg
