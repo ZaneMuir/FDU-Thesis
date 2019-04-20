@@ -1,29 +1,42 @@
 \section{引言}
-%计时的生物学意义
-%感觉计时与运动计时
-%主要内容
 
 % Timing and everyday life, why it is so important
-时间就好像空间一样，也是现实世界的重要组成部分。
-因而对于时间有好的掌控和理解，对于每个个体的学习、记忆、行为都至关重要。
+%时间就好像空间一样，也是现实世界的重要组成部分。
+%因而对于时间有好的掌控和理解，对于每个个体的学习、记忆、行为都至关重要。
+时间和空间一样，也是现实世界的重要组成部分。而时间又同空间有本质上的差别，
+时间不能像空间一样朝任意方向随意的移动，而只能朝一个方向以固定的速率前进。
+因而生物体对时间感知无法像对空间一样具有主动的探索性或者多样性，
+例如视觉中的方向选择性，海马里的place cell等。
+另一方面，时间作为现实的一个维度，对视觉、听觉、触觉等等几乎所有的感觉和运动
+甚至高级的皮层功能都是至关重要的，因而生物体神经系统对时间信息的编码应当
+是普遍而广泛的。
 
 % timing has different scales, it is the millisecond and second timing we are
 % talking about.
 不同于我们人造的时钟，生物体内对不同尺度的计时有着截然不同的生物学机制。
-例如，微秒层次的计时，依赖于动作电位到达相同树突的微小差异来实现；
-生物体也主要用此来定位声音的来源。例如，以天计的生物钟，独立于动作电位依靠
-转录合成降解的动态循环来实现；掌控着生物体的昼夜节律。神经生物发展至今，
-已经发现和明确了许多机制，但对于毫秒和数秒层面计时的机制依然不是很明朗。
+例如，微秒层次的计时，依赖于不同树突棘接受的动作电位到达树突的微小时间差异来实现；
+生物体也主要用此来定位声音的来源\cite{moiseff1981neuronal}。
+例如，以天计的生物钟，独立于动作电位依靠
+转录、合成、降解的动态循环来实现；掌控着生物体的昼夜节律\cite{panda2002circadian}。
+神经生物发展至今，已经发现和明确了许多机制，但对于毫秒和数秒层面计时的机制依然不是很明朗
+\cite{buonomano2007biology,paton2018neural}。
 而这个层次的计时也最为复杂和重要。它可以帮助生物体对即将到来的事件作出预判，
-协助不同个体间的交流，让我们有能力创造出音乐等等。
+协助不同个体间的交流，让我们有能力创造出音乐，有能力用语言来交流等等。
 
 % sensory timing and motor timing are different, but more and more articles
 % talk about sensorimotor coupling and showing that they might come from the
 % same neural circuit.
-对于毫秒和数秒层面计时，再过去常常分为感觉计时(sensory timing)和
-运动计时(motor timing)。感觉计时更关注于神经网络如何对外部刺激侦测
-并提取出时间序列，而运动时间更关注于如何主动的产生时间序列和预判的信号。
-随着研究的不断推进，人们发现在很多脑区和核团存在感觉运动的耦连(sensorimotor coupling)
+%对于毫秒和数秒层面计时，在过去常常分为感觉计时(sensory timing)和
+%运动计时(motor timing)。感觉计时更关注于神经网络如何对外部刺激侦测
+%并提取出时间序列，而运动时间更关注于如何主动的产生时间序列和预判的信号。
+%随着研究的不断推进，人们发现在很多脑区和核团存在感觉运动的耦连(sensorimotor coupling)
+对于时间感知和计时的理论模型大致可以分为两大类，即内在模型(intrisinc model)和
+专用模型(dedicated model)\cite{ivry2008dedicated,paton2018neural}。
+专用模型的主要观点在于大脑中存在特定的管理计时的区域，就好像视觉皮层主管视觉，
+听觉皮层主管听觉一样，计时也存在特殊的计时相关皮层或核团。
+而内在模型的主要观点在于计时是一切行为和功能所必需的一环，因而计时是广泛而普遍的，
+不存在特定的计时脑区，而是分散于不同的皮层和核团，与不同的脑区所主要负责的功能相整合在一起。
+%而随着各类研究的进行，有越来越多的证据表明内在模型可能更加符合实际情况。
 
 % Timing has many unique properties, like weber's law and time warp.
 % skip this part.
@@ -32,6 +45,7 @@
 % we will first review theoretical mechanisms for timing and some other
 % empirical evidence. Finally, we will talk about some limitations of
 % the current models and theories.
-对于本综述，我们将首先回顾一下当前主要的对毫秒和数秒层面计时的理论机制以及
-相关的实验研究，再着重回顾一下初级视皮层内的计时现象和机制探究，最后探讨一下
-当下这些机制的主要不足和未来的发展前景。
+对于本综述，我们将主要回顾一下当前主流的对毫秒和数秒层面计时的理论机制和相关模型假说,
+包括震荡模型(oscillation)，梯度模型(ramping model)以及动态系统(dynamic system);
+其中，我们将着重探讨动态系统理论模型的细节。
+最后，我们会进一步探讨一下当下这些机制和模型的主要优势和不足，以及未来的展望。
