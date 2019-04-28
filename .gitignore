@@ -2,6 +2,8 @@ UltiSnips
 .DS_Store
 
 /*.pdf
+*.pdf
+*.png
 archive/
 *.aux
 *.log

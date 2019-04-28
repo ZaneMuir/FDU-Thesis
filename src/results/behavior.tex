@@ -44,14 +44,7 @@
 
 \begin{figure}[h]
     \begin{center}
-
-    \includegraphics[width=0.45\textwidth]{src/figures/mouse_behavior_schema.pdf}
-    ~
-    \includegraphics[width=0.45\textwidth]{src/figures/mouse_behavior_example.pdf}
-
-    \includegraphics[width=0.45\textwidth]{src/figures/mouse_behavior_curve.pdf}
-    ~
-    \includegraphics[width=0.45\textwidth]{src/figures/mouse_behavior_weber.pdf}
+    \includegraphics[width=\textwidth]{src/figures/mouse_behavior.pdf}
     \end{center}
 
     \caption{\textbf{规律刺激下的小鼠时间预测行为}\\
@@ -61,22 +54,43 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{患者的时间间隔预测行为}
-为了让对人的实验结果与小鼠的实验结果可以
+为了进一步探究人脑对时间间隔的感知，我们对小鼠的行为学范式稍加改进后用于
+对人的实验。对于相同类型的视觉刺激，我们设计了不同的时间间隔，包括4秒和9秒间隔；
+以及不同的行为范式，包括轻拍手，默想和空想(图\ref{fig:human_behavior}~a)。
+轻拍手下被试需要主动判断预测的同时，还需要行为上的输出；
+在默想范式下，则只需要主动判断预测；
+而空想范式中更多的只是体现单纯的视觉刺激造成的影响。
 
-\subsection{心理测试范式}
+同时，我们选择了没有患癫痫的正常人进行了行为学实验，以作为对照组进行参考。
 
 \subsection{韦伯定律}
+我们首先计算了不同天里的行为学韦伯系数(图\ref{fig:human_behavior}~b),
+并对5秒间隔和10秒间隔进行了对比，结果两者之间没有统计学上的显著性差异
+(t检验，t统计量为1.130，p值为0.259)。表明两种间隔的行为没有差别，与
+韦伯定律相符合\cite{gibbon1977scalar, hardy2018encoding}。
+
+同时，我们计算了韦伯系数的线性相关系数，但没有统计学上的显著性(t检验, p值分别为0.570和0.417)；
+提示患者在不同天里的行为学表现没有显著的变化，可能是因为每天进行行为学实验的时间
+并不是很长(约30分钟)，并不足以形成稳定的记忆。因此，我们可以将不同天的行为学认为
+是在同一天内进行的。
+
+为了进一步评估一天内行为学表现可能的变化，我们将每天的20次刺激分为5份(quintiles),
+分别计算每份的韦伯系数(图\ref{fig:human_behavior}~c)。
+但5秒间隔，10秒间隔和对照组的5份间的韦伯系数没有统计学上的显著性差异
+(one-way ANOVA, F统计量分别为3.309, 0.841和0.019，p值为0.057，0.497和0.996)。
+但可以看到第一份的韦伯系数较后四份的有更大的趋势；同时考虑到实验中，患者自我调整
+的速度很快。这一现象可能是由于患者在第一份的中间就已经很好的把握了时间间隔，
+并能够较为准确的预测了。
+而在过去类似的行为学范式中，也同样存在类似的快速学习的过程\cite{simen2011model}。
 
 \subsection{轻拍手行为分布}
+由于将行为学表现抽象为
 
 \subsection{行为结果所体现的可能的理论机制}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{src/figures/human_behavior_distribution_control.png}
-
-    \includegraphics[width=0.9\textwidth]{src/figures/human_behavior_distribution_patient_6.png}
-
+    \includegraphics[width=\textwidth]{src/figures/human_behavior.pdf}
     \caption{规律刺激下的人的时间预测行为}
     \label{fig:human_behavior}
 \end{figure}
