@@ -1,0 +1,14 @@
+* FDU thesis
+** DONE outline
+   CLOSED: [2019-04-29 Mon 20:35]
+** DONE something lese
+   CLOSED: [2019-04-29 Mon 20:35]
+some other notes
+and other notes
+and another nots
+** [#B] hahahah [100%]
+- [X] b
+- [X] cfda
+- [X] dafads [2/2]
+  - [X] dafdas
+  - [X] fdasfds
