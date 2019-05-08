@@ -31,7 +31,12 @@
     \centering
     \includegraphics[width=\textwidth]{src/figures/ephys_examples.pdf}
     \caption{\textbf{电生理记录通道示例}\\
-    (\textbf{a})~电极的脑区定位。}
+    (\textbf{a})~电极的脑区定位。每个红点均为一个记录通道，这里将记录到的
+    6位患者的电极画在一起。(\textbf{b}, \textbf{c}, \textbf{d})~不同行为范式下
+    同一个通道的示例。b: 脑电信号的原始形式，黑色的竖线对应光栅定时的时间。
+    c: 脑电信号通过小波变化得到的能量频谱，展现了信号能量主要集中于\(\gamma\)波段。
+    d: 带通滤波后的脑电信号能量曲线。
+    (\textbf{e}, \textbf{f}, \textbf{g})~小鼠中局部场电位的示例。}
     \label{fig:ephys_example}
 \end{figure}
 
@@ -42,19 +47,44 @@
 扣带回(cingulate cortex, 主要为Brodmann分区22), %TODO
 以及颞中回(middle temporal gyrus, 主要为Brodmann分区)。%TODO
 
-对相同脑区下的脑电能量曲线进行平均后(图\ref{fig:ehpys_network}~a)，
+对相同脑区下的脑电能量曲线进行平均后(图\ref{fig:ephys_network}~a)，
 我们发现三个脑区的能量曲线形态十分相似，提示光栅刺激可能会引起全脑范围的活动。
 %TODO: 视觉的处理
 另一方面，对于三种不同的行为范式，轻拍手和默想下的能量曲线基本一直，而空想下的
-能量曲线较前两者
+能量曲线较前两者有明显的下降。%TODO statistical significance
+提示注意力的集中程度可能会影响大脑的整体活动，但需要额外的实验进行验证和探究。
+
+%扩散方向
 
 \subsection{相位分析显示学习过程}
+脑电信号可以被看作是一种特殊的数字信号，因而我们进一步计算了脑电信号的相位信息。
+不同于信号的能量，相位的绝对值没有实际的生物学意义，但相位可以被认为
+是一种神经元群体放电的状态。%TODO citation request
+为了量化脑电信号的相位，我们将同一天中20次刺激下的脑电信号分为一组，
+计算了各组的ITPC值，并对各个通道的ITPC值依照脑区进行平均(图\ref{fig:ephys_network}~b)。
+可见，患者的脑电出现了两次相位锁定(phase locking)，分别位于光栅开始和光栅结束。
+其中，对于轻拍手和模型范式，ITPC值基本一致；
+而空想下，ITPC值较前两者明显降低。%TODO statistical significance
+提示在空想下的放电活动的一致性不如轻拍手和默想范式。
+
+同时，我们也对小鼠的脑电信号做了相同的相位分析(图\ref{fig:ephys_network}~d)。
+与患者的相位不同，小鼠的脑电只有在光栅开始后有一次相位锁定，而在光栅结束后没有。
+
+此外，我们将轻拍手范式下，依据患者是否存在提前打手(即，是否能够较为准确的预判时间间隔),
+将脑电信号分为两组，即提前打手组和延后打手组。我们对这两组的脑电信号分别计算了
+各自的ITPC值(图\ref{fig:ephys_network}~c)，发现延后打手的行为中，脑电信号的
+相位没有出现提前打手下的相位锁定现象。提示能否准确预测时间间隔，
+可能回造成相同视觉刺激下的不同放电模式。
+
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{src/figures/ephys_network.pdf}
-    \caption{\textbf{相位分析}\\
-    (\textbf{a})~电极的脑区定位。}
+    \caption{\textbf{不同脑区下能量曲线与相位锁定}\\
+    (\textbf{a})~不同脑区不同行为范式下的能量曲线。
+    (\textbf{b})~不同脑区不同行为范式下的相位变化。
+    (\textbf{c})~轻拍手范式下，提前打手(准确预判)和延后打手(错误预判)的相位变化。
+    (\textbf{d})~小鼠场电位的相位变化。}
     \label{fig:ephys_network}
 \end{figure}
 
