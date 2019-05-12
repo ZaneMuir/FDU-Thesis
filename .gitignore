@@ -2,7 +2,6 @@ UltiSnips
 .DS_Store
 
 /*.pdf
-*.pdf
 *.png
 archive/
 *.aux
@@ -19,3 +18,6 @@ archive/
 *.swp
 *.eps
 *.svg
+
+*.doc
+*.docx
