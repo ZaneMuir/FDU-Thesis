@@ -65,11 +65,13 @@
 %}
 
 %--------------------------------Bib Setup-------------------------------!
-%\RequirePackage[numbers,super,sort&compress]{natbib}
-%\bibpunct{[}{]}{,}{s}{}{,}
-%\renewcommand{\bibfont}{\wuhao}
-%\setlength{\bibsep}{0pt}
-%\usepackage{hypernat}
+\RequirePackage[numbers,super,sort&compress]{natbib}
+\bibpunct{[}{]}{,}{s}{}{,}
+\renewcommand{\bibfont}{\wuhao}
+\setlength{\bibsep}{0pt}
+\usepackage{hypernat}
+\usepackage{multibib}
+\newcites{review}{综述参考文献}
 
 %-----------------------------Hyper Ref Setup--------------------------!
 %Enable Href HyperLinks, BookMarks

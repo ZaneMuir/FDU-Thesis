@@ -1,21 +1,20 @@
-\section{缓坡模型}
 
 % what is ramping phenomenon
 在动物实验中，存在着神经元的放电频率会随着时间出现线性递增或者递减，直到某一个阈值
 触发一定的后续行为的现象，并被称作缓坡模型或者缓坡模型(Ramping Model)
-\cite{durstewitz2003self,simen2011model,paton2018neural}。
+\citereview{durstewitz2003self,simen2011model,paton2018neural}。
 
 % relationship between ramping and timing
-这种放电频率线性变化的现象广泛分布于动物的神经系统中\cite{durstewitz2003self,simen2011model},
+这种放电频率线性变化的现象广泛分布于动物的神经系统中\citereview{durstewitz2003self,simen2011model},
 Simen等人对该现象进行了数学建模,
 他们将神经元的活动简化为泊松进程(Poisson process)，并将模型分为了四个层次:
 (1)泊松进程拟合的单个神经元活动; (2)兴奋性和抑制性强度一致的细胞群体;
-(3)不同细胞群体组成的积分器(integrator); (4)将所有环路输出成结果的输出层，模拟行为的结果\cite{simen2011model}。
+(3)不同细胞群体组成的积分器(integrator); (4)将所有环路输出成结果的输出层，模拟行为的结果\citereview{simen2011model}。
 他们的模拟结果与实际的实验结果十分符合，同时也可以用模型解释韦伯定律。
 对于不同的时长任务，相同的体现计时的神经元的放电频率变化的斜率会发生相对应的改变，
 以是得最后到达阈值的时刻与实际的时长相接近。
 而Durstewitz利用了spiking leaky-integrate-and-fire (LIF) neuron model,
-对缓坡模型的建模则更加贴近真实的神经元活动\cite{durstewitz2003self}。
+对缓坡模型的建模则更加贴近真实的神经元活动\citereview{durstewitz2003self}。
 虽然模型没有分多个层次，但对单细胞的膜电位模拟更加精准和贴近现实；
 而得到的结果也十分类似，同样也得到了放电频率的线性变化。
 

@@ -1,4 +1,3 @@
-\section{动态系统}
 
 % what is dynamic system
 正如在缓坡模型中线性变化可能只是一群细胞活动的读出结果，
@@ -7,7 +6,7 @@
 
 % reservoir computation
 神经元的群体活动可以被抽象成回溯神经网络(recurrent neural network)或者
-一组微分方程(方程\ref{equ:dynamic_system})\cite{remington2018dynamical}:
+一组微分方程(方程\ref{equ:dynamic_system})\citereview{remington2018dynamical}:
 \begin{equation}
     \label{equ:dynamic_system}
     \frac{dX}{dt} = f(X) + U
@@ -20,15 +19,15 @@ $f(X)$体现了神经元之间的相互作用，$U$则代表了来自群体外�
 我们需要将多维度的群体做一定的降维处理(每个神经元个体看作是一个单独的维度)，
 最常用的方法就是主成分分析(principle compoenent analysis, PCA)。
 而群体活动在低维空间中的投影常常被称作神经轨迹(neural trajectory)
-\cite{remington2018dynamical,paton2018neural}。
+\citereview{remington2018dynamical,paton2018neural}。
 
 Hardy和Buonomano通过理论模拟，证明了同一个回溯神经网络可以编码不同的神经轨迹，
-并对不同的外界刺激做出不同的反应\cite{hardy2018encoding}。同时也有越来越多的
+并对不同的外界刺激做出不同的反应\citereview{hardy2018encoding}。同时也有越来越多的
 实验结果表明神经元的群体活动可以编码计时行为，它们的神经轨迹在相同的刺激下也总是
-相吻合\cite{paton2018neural,remington2018dynamical,bakhurin2017differential}。
+相吻合\citereview{paton2018neural,remington2018dynamical,bakhurin2017differential}。
 
 神经元群体对时间信息的编码过程可以理解为是储层计算(reservoir computation)的过程
-\cite{hardy2018encoding,paton2018neural,remington2018dynamical,maass2002real}。
+\citereview{hardy2018encoding,paton2018neural,remington2018dynamical,maass2002real}。
 对于一个随机连接的群体，得到一定的刺激后，神经元之间就存在了一定的放电模式，即
 一定的神经轨迹。而随着学习和反复的刺激，这条最初的神经轨迹被慢慢的固定下来，
 在一定的噪音扰动下也可以保持原来的轨迹；但这条轨迹的形状与行为或者刺激没有任何
@@ -47,7 +46,7 @@ Hardy和Buonomano通过理论模拟，证明了同一个回溯神经网络可以
 在于它对每个神经元都做了简化和抽象，同时细胞与细胞之间的连接也是随机连接而没有
 参考实际的连接模式。这些不足给模型带来了过拟合的可能性，即只要模型中神经元的个数
 足够多，模拟的结果必然可以与实验结果相吻合。同时，生物对时间间隔的感知的学习可以
-很快完成，尤其是一些涉及到厌恶性的刺激\cite{simen2011model}，例如电击等。
+很快完成，尤其是一些涉及到厌恶性的刺激\citereview{simen2011model}，例如电击等。
 而回溯神经网络的学习需要通过较多的训练来调整权重参数，提示了当前的训练或个学习策略
 与神经系统中真实发生的样子还是存在一定的差异。
 

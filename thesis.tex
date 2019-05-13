@@ -4,7 +4,7 @@
 \documentclass[a4paper, 12pt]{book}
 
 \usepackage{FDUThesis}
-\usepackage{gbt7714} %在正文中 \cite 文献
+%\usepackage{gbt7714} %在正文中 \cite 文献
 \author{Yizhan Miao $<$\href{mailto:yzmiao@pm.me}{yzmiao@pm.me}$>$}
 
 \begin{document}
@@ -85,17 +85,28 @@
 %\renewcommand{\thechapter}{附录{\Alph{chapter}}}
 
 % ----------------
-\include{src/Review}
 
 % ---------------- Back Matter ----------------
 \backmatter
 \setlength{\baselineskip}{10pt}
 \phantomsection
 \addcontentsline{toc}{chapter}{\bibname}
-%\bibliographystyle{FDUbib}
+\bibliographystyle{gbt7714-plain}
 \bibliography{ThesisBib}
 
+\setlength{\baselineskip}{20pt}  % 20磅行间距
+\include{src/Review}
+
 \backchapter{致谢}
+% 首先是对论文指导老师的致谢（致谢方向为：导师对本论文的贡献及对论文作者的教导、影响）模式；
+% 然后是对论文写作过程中提供过帮助的老师的致谢（致谢方向为：该老师对本论文的实验部分提供的帮助及指导，对论文实验部分出现问题的解决等）模式；
+% 第三部分是在论文写作过程中，对帮助过您做试验或者查资料的师兄、师姐、同学、师弟、师妹、朋友的感谢。
+% 第四段是感谢您的家人、朋友对您的论文写作及学习期间的支持。
+% 1.回顾读书生涯。
+% 2.感谢学校、老师，特别是导师。
+% 3.感谢家人。
+% 4.感谢论文写作中给予帮助的人。
+% 5.未来愿景。
 
 \clearpage
 %\printindex
