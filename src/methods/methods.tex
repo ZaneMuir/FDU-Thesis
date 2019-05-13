@@ -127,18 +127,6 @@
 % 而后, 我们随机生成1000个刺激起始时刻, 重复上述的自动检测。
 % 被认定为有出现了回现的次数占总测试次数的比例即为回现的随机水平。
 
-% \subsubsection{支持向量机(support vector machine, SVM)分析}
-% 为了进一步量化神经元群体和不同脑区间对时间间隔的编码,
-% 我们利用径向基核函数多分类支持向量机进行评估(multiclass radial-basis function kernel support vector machine )。
-% 我们将时间间隔分割为20份(对于5秒间隔, 每份为250毫秒, 对于10秒间隔则为500毫秒)。
-% SVM的实现依赖于LIBSVM库(DOI: 10.1145/1961189.1961199)。
-% 多分类采用了one-against-one的方法, SVM的输出为一个20维的向量, 代表了SVM对于输入数据与对应的20个时刻的相似程度。
-% SVM的训练与测试采用了留一交叉验证(Leave-One-Out Cross Validation)的方法, 对最后的SVM结果利用Pearson相关系数来做量化。
-%
-% 我们严格把控和限制了支持向量机的数据集。我们仅选择了在视皮层, 扣带回的相关脑区, 并将其安装有无光反应做了分类。
-% 同时, 为了增加对照并评估过拟合的可能, 我们还对数据采取了试验内随机化和试验间随机化。
-% 试验内随机化将同一次试验内的不同时间做随机化; 试验间随机化则将相同时间点但不同试验的数据做随机化。
-% 随机化后的SVM结果也用Pearson相关系数来做量化。
 
 \subsubsection{相位分析}
 相位也是脑电信号的重要组成部分之一。为了量化患者脑电信号的相位,
@@ -168,6 +156,27 @@
 ITPC体现了多次刺激间脑电信号的相位集中趋势。根据公式可知, ITPC值的取值范围为0到1。
 当ITPC为0时, 提示多次的相位完全随机; 而当ITPC为1时, 提示多次的相位完全相同。
 
+\subsubsection{支持向量机(support vector machine, SVM)分析}
+为了进一步量化神经元群体和不同脑区间对时间间隔的编码,
+我们利用径向基核函数多分类支持向量机进行评估(multiclass radial-basis function kernel support vector machine )。
+我们将时间间隔分割为20份(对于5秒间隔, 每份为250毫秒)。
+SVM的实现依赖于LIBSVM库\cite{chang2011libsvm}。
+多分类采用了one-against-one的方法, SVM的输出为一个20维的向量, 代表了SVM对于输入数据与对应的20个时刻的相似程度。
+SVM的训练与测试采用了留一交叉验证(Leave-One-Out Cross Validation)的方法, 对最后的SVM结果利用Pearson相关系数来做量化。
+
+我们严格把控和限制了支持向量机的数据集。我们仅选择了在视皮层, 扣带回的相关脑区, 并将其按照有无光反应做了分类。
+同时, 为了增加对照并评估过拟合的可能, 我们还对数据采取了时间随机化和测试随机化。
+时间随机化将同一次测试内的不同时间做随机化;
+测试随机化则将相同时间点但不同测试的数据做随机化。
+随机化后的SVM结果也用Pearson相关系数来做量化。
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{src/figures/svm_workflow.pdf}
+    \caption{支持向量机分析的基本流程}
+    \label{fig:svm_scheme}
+\end{figure}
+
 \subsubsection{分析用代码}
 视觉刺激用代码如有需要, 请与本人或指导老师联系, 如理由正当合理将以邮件形式分享。
-后续数据分析用Python代码可在\href{https://github.com/ZhangJiayiLab/EEGAnalysis/releases/tag/v1.0}{GitHub}获得。
+% 后续数据分析用Python代码可在\href{https://github.com/ZhangJiayiLab/EEGAnalysis/releases/tag/v1.0}{GitHub}获得。
