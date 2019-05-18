@@ -1,5 +1,7 @@
 UltiSnips
 .DS_Store
+/src/figures/*/*
+*_old.*
 
 /*.pdf
 *.png
